@@ -1,0 +1,113 @@
+[
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "name": "Рассылка 50",
+      "description": "Рассылка 50 получателям.",
+      "image": "",
+      "category": 1,
+      "price": 1000
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "name": "Рассылка 100",
+      "description": "Рассылка 100 получателям.",
+      "image": "",
+      "category": 1,
+      "price": 2000
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "name": "Телеграм бот курс доллара",
+      "description": "Бот получает курс доллара и извещает об изменении курса.",
+      "image": "",
+      "category": 2,
+      "price": 5000
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "name": "Телеграм бот курс ЕВРО",
+      "description": "Бот получает курс ЕВРО и извещает об изменении курса.",
+      "image": "",
+      "category": 2,
+      "price": 5000
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+      "name": "Деинсталлятор ПО",
+      "description": "Помогает удалить ПО и очистить реестр.",
+      "image": "",
+      "category": 3,
+      "price": 10000
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+      "name": "Редактор реестра",
+      "description": "Можно редактировать реестр Windows.",
+      "image": "",
+      "category": 3,
+      "price": 10000
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 7,
+    "fields": {
+      "name": "Новостное Веб-приложение",
+      "description": "Получает новости из различных источников.",
+      "image": "",
+      "category": 4,
+      "price": 12000
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 8,
+    "fields": {
+      "name": "Веб-приложение 'блог обо всем'",
+      "description": "Интернет - дневник,  дневник в реальном времени (онлайн-дневник))",
+      "image": "",
+      "category": 4,
+      "price": 13000
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 9,
+    "fields": {
+      "name": "Микросервис системы оплаты.",
+      "description": "Обрабатывает транзакции и взаимодействует с платежными системами.",
+      "image": "",
+      "category": 5,
+      "price": 7000
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 10,
+    "fields": {
+      "name": "Микросервис корзины покупок.",
+      "description": "Отвечает за добавление и удаление товаров из корзины, а также расчет стоимости заказа.",
+      "image": "",
+      "category": 5,
+      "price": 15000
+    }
+  }
+]
+
