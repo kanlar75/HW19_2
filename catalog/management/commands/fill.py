@@ -6,8 +6,9 @@ from catalog.models import Product, Category
 class Command(BaseCommand):
 
     def handle(self, *args, **options):
-        Category.objects.all().delete()
-        Product.objects.all().delete()
+
+        Category.truncate()
+        Product.truncate()
 
         categories_list = [
             {'pk': 1, 'name': 'рассылки', 'description': 'отправка одного сообщения большому количеству получателей'},
