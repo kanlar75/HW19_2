@@ -6,19 +6,15 @@ from catalog.models import Product
 
 # Create your views here.
 def index(request):
-    if request.method == 'POST':
-        name = request.POST.get('name')
-        email = request.POST.get('phone')
-        message = request.POST.get('message')
     return render(request, 'catalog/index.html', {'title': 'Главная страница'})
 
 
 def contacts(request):
-    # if request.method == 'POST':
-    #     name = request.POST.get('name')
-    #     email = request.POST.get('phone')
-    #     message = request.POST.get('message')
-    #     print(f'You have new message from {name}({email}): {message}')
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('phone')
+        message = request.POST.get('message')
+        print(f'You have new message from {name}({email}): {message}')
     return render(request, 'catalog/contacts.html', {'title': 'Контакты'})
 
 
