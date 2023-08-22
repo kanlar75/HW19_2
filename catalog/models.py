@@ -1,3 +1,5 @@
+from django.urls import reverse
+
 from django.db import models, connection
 
 NULLABLE = {'blank': True, 'null': True}
@@ -8,7 +10,7 @@ class Category(models.Model):
     description = models.TextField(blank=True, verbose_name='описание')
 
     def __str__(self):
-        return f'{self.name} ({self.description})'
+        return f'{self.name}'
 
     class Meta:
         verbose_name = 'категория'
@@ -40,3 +42,5 @@ class Product(models.Model):
     def truncate(cls):
         with connection.cursor() as cursor:
             cursor.execute(f'TRUNCATE TABLE {cls._meta.db_table} RESTART IDENTITY CASCADE')
+
+

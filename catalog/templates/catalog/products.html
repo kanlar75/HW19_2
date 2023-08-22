@@ -32,10 +32,11 @@
         <div class="col-md-4 mb-4">
           <div class="card product-card">
             <div class="card-body">
-              <h5 class="card-title">{{ product.name }}</h5>
-              <p class="card-text">{{ product.description | truncatechars:50}}</p>
-              <h6 class="card-subtitle mb-2 text-muted">{{product.price}} рублей</h6>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Подробнее</button>
+                <img src="/media/{{ object.image }}" style="height: 300px"/></img>
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text">{{ product.description | truncatechars:30}}</p>
+                <h6 class="card-subtitle mb-2 text-muted">{{product.price}} рублей</h6>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Подробнее</button>
             </div>
           </div>
         </div>
