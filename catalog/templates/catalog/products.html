@@ -1,4 +1,5 @@
 {% extends 'catalog/base.html' %}
+{% load my_tags %}
 {% block content %}
   <style>
     .product-card {
@@ -32,7 +33,8 @@
         <div class="col-md-4 mb-4">
           <div class="card product-card">
             <div class="card-body">
-                <img src="/media/{{ object.image }}" style="height: 300px"/></img>
+<!--                <img src="{{ product.image|mediapath }}" style="height: 300px"/></img>-->
+                <img src="{% mediapath product.image %}" style="height: 300px"/>
                 <h5 class="card-title">{{ product.name }}</h5>
                 <p class="card-text">{{ product.description | truncatechars:30}}</p>
                 <h6 class="card-subtitle mb-2 text-muted">{{product.price}} рублей</h6>
