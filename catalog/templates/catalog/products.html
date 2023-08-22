@@ -36,7 +36,7 @@
 <!--                <img src="{{ product.image|mediapath }}" style="height: 300px"/></img>-->
                 <img src="{% mediapath product.image %}" style="height: 300px"/>
                 <h5 class="card-title">{{ product.name }}</h5>
-                <p class="card-text">{{ product.description | truncatechars:30}}</p>
+                <p class="card-text">{{ product.description | truncatechars:50}}</p>
                 <h6 class="card-subtitle mb-2 text-muted">{{product.price}} рублей</h6>
                 <button type="button" class="btn btn-sm btn-outline-secondary">Подробнее</button>
             </div>
