@@ -24,7 +24,7 @@ from django.urls import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('catalog.urls', namespace='catalog'))
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

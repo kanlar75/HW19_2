@@ -17,7 +17,7 @@ def contacts(request):
         email = request.POST.get('phone')
         message = request.POST.get('message')
         print(f'You have new message from {name} ({email}): {message}')
-    return render(request, 'catalog/contacts.html', context=context )
+    return render(request, 'catalog/contacts.html', context=context)
 
 
 def products(request):
@@ -27,4 +27,8 @@ def products(request):
     return render(request, 'catalog/products.html', context=context)
 
 
+def product(request, pk):
+    product_item = Product.objects.get(pk=pk)
+    context = {'product': product_item, 'title': 'Информация о товаре'}
 
+    return render(request, 'catalog/product.html', context=context)
