@@ -8,6 +8,6 @@ urlpatterns = [
     path('', index, name='index'),
     path('index/', index, name='index'),
     path('contacts/', contacts, name='contacts'),
-    path('products/', products, name='products'),
-    path('product/<int:pk>', product, name='product'),
+    path('products/', ProductsListView.as_view(), name='products'),
+    path('product/<int:pk>/', ProductDetailView.as_view(), name='product'),
     ]

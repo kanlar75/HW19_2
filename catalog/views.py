@@ -2,9 +2,9 @@
 from django.shortcuts import render
 
 from catalog.models import Product
+from django.views.generic import ListView, DetailView
 
 
-# Create your views here.
 def index(request):
     context = {'title': 'Главная страница'}
     return render(request, 'catalog/index.html', context=context)
@@ -20,15 +20,25 @@ def contacts(request):
     return render(request, 'catalog/contacts.html', context=context)
 
 
-def products(request):
-    products_l = Product.objects.all()
-    context = {'products': products_l, 'title': 'Продукты'}
+class ProductsListView(ListView):
+    model = Product
+    template_name = 'catalog/products.html'
+    context_object_name = 'products'
 
-    return render(request, 'catalog/products.html', context=context)
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Продукты'
+        return context
 
 
-def product(request, pk):
-    product_item = Product.objects.get(pk=pk)
-    context = {'product': product_item, 'title': 'Информация о товаре'}
+class ProductDetailView(DetailView):
+    model = Product
+    template_name = 'catalog/product.html'
+    context_object_name = 'product'
+    pk_url_kwarg = 'pk'
 
-    return render(request, 'catalog/product.html', context=context)
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Подробнее о продукте'
+        return context
+
