@@ -1,0 +1,12 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+    <div class="row">
+        {% for object in object_list %}
+            <div class="col-md-4">
+                <h2>{{ object.title }}</h2>
+                <p>{{ object.body|slice:100 }}</p>
+                <p><a class="btn btn-secondary" href="/blog/{{ object.pk }}" role="button">Смотреть подробнее &raquo;</a></p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
