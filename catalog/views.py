@@ -2,33 +2,54 @@
 from django.shortcuts import render
 
 from catalog.models import Product
+from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView, TemplateView
+from django.urls import reverse_lazy
+from pytils.translit import slugify
 
 
-# Create your views here.
-def index(request):
-    context = {'title': 'Главная страница'}
-    return render(request, 'catalog/index.html', context=context)
+class IndexView(TemplateView):
+    template_name = 'catalog/index.html'
+    extra_context = {
+        'title': 'Главная'
+    }
 
 
-def contacts(request):
-    context = {'title': 'Контакты'}
-    if request.method == 'POST':
-        name = request.POST.get('name')
-        email = request.POST.get('phone')
-        message = request.POST.get('message')
-        print(f'You have new message from {name} ({email}): {message}')
-    return render(request, 'catalog/contacts.html', context=context)
+class ContactView(TemplateView):
+    template_name = 'catalog/contacts.html'
+    extra_context = {
+        'title': 'Контакты'
+    }
+
+    def get_context_data(self, **kwargs):
+        if self.request.method == 'post':
+            name = self.request.POST.get('name')
+            phone = self.request.POST.get('phone')
+            message = self.request.POST.get('message')
+            print(f'You have new message from {name}({phone}): {message}')
+        return super().get_context_data(**kwargs)
 
 
-def products(request):
-    products_l = Product.objects.all()
-    context = {'products': products_l, 'title': 'Продукты'}
+class ProductsListView(ListView):
+    model = Product
+    template_name = 'catalog/products.html'
+    context_object_name = 'products'
 
-    return render(request, 'catalog/products.html', context=context)
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Все продукты'
+        return context
 
 
-def product(request, pk):
-    product_item = Product.objects.get(pk=pk)
-    context = {'product': product_item, 'title': 'Информация о товаре'}
+class ProductDetailView(DetailView):
+    model = Product
+    template_name = 'catalog/product.html'
+    context_object_name = 'product'
+    pk_url_kwarg = 'pk'
 
-    return render(request, 'catalog/product.html', context=context)
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Подробнее о продукте'
+        return context
+
+
+
