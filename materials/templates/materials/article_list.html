@@ -18,7 +18,7 @@
             <h2>{{ object.title }}</h2>
             <p>{{ object.body|slice:100 }}</p>
             <p>
-                <a class="btn btn-secondary" href="{% url 'materials:list' object.pk %}">Смотреть подробнее</a>
+                <a class="btn btn-secondary" href="{% url 'materials:view' object.pk %}">Смотреть подробнее</a>
             </p>
         </div>
         {% endfor %}

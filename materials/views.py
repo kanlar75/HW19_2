@@ -49,7 +49,7 @@ class ArticleUpdateView(UpdateView):
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse('materials:list', args=[self.kwargs.get('pk')])
+        return reverse('materials:view', args=[self.kwargs.get('pk')])
 
 
 class ArticleDeleteView(DeleteView):
