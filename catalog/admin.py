@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from catalog.models import Product, Category, Article
+from catalog.models import Product, Category
 
 
 # Register your models here.
@@ -16,6 +16,4 @@ class ProductAdmin(admin.ModelAdmin):
     search_fields = ('name', 'description',)
 
 
-@admin.register(Article)
-class ArticleAdmin(admin.ModelAdmin):
-    fields = ('title', 'body',)
+

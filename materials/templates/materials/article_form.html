@@ -6,11 +6,10 @@
             <div class="col-6">
                 <div class="card">
                      <div class="card-body">
-                         <form method="post">
+                         <form method="post" enctype="multipart/form-data">
                              {% csrf_token %}
                              {{form.as_p}}
-                                 <button type="submit" class="btn btn-primary">Добавить</button>
-                             </form>
+                                 <button type="submit" class="btn btn-primary">Применить</button>
                          </form>
                      </div>
                 </div>
