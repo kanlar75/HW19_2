@@ -43,3 +43,16 @@ class Product(models.Model):
         with connection.cursor() as cursor:
             cursor.execute(f'TRUNCATE TABLE {cls._meta.db_table} RESTART IDENTITY CASCADE')
 
+
+class Version(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name='продукт')
+    number_ver = models.IntegerField(verbose_name='номер версии', unique=True)
+    name_ver = models.CharField(max_length=100, verbose_name='название версии')
+    sign_ver = models.BooleanField(default=True, verbose_name='признак версии')
+
+    class Meta:
+        verbose_name = 'версия'
+        verbose_name_plural = 'версии'
+
+    def __str__(self):
+        return f'{self.number_ver} / ({self.name_ver})'
