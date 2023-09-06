@@ -1,6 +1,10 @@
 {% extends 'catalog/base.html' %}
 {% load my_tags %}
 {% block content %}
+<div class="col-12">
+    <a class="btn btn-outline-primary" href="{% url 'catalog:create' %}">Добавить продукт</a>
+</div>
+
   <style>
     .product-card {
       border: 1px solid #ccc;
@@ -39,7 +43,8 @@
                 <p class="card-text">{{ product.description | truncatechars:50}}</p>
                 <h6 class="card-subtitle mb-2 text-muted">{{product.price}} рублей</h6>
                 <p><a class="btn btn-secondary" href="/product/{{product.pk}}" role="button">Подробнее &raquo;</a></p>
-
+                <a href="{% url 'catalog:update' product.pk %}" class="btn btn-primary my-2">Редактирование</a>
+                <a href="{% url 'catalog:delete' product.pk %}" class="btn btn-primary my-2">Удалить</a>
             </div>
           </div>
         </div>
