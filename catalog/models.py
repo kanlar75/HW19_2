@@ -45,10 +45,11 @@ class Product(models.Model):
 
 
 class Version(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name='продукт')
-    number_ver = models.IntegerField(verbose_name='номер версии', unique=True)
+    SIGN_CHOICES = (('active', 'Активна'), ('no_active', 'Не активна'))
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="number_ver", verbose_name='продукт')
+    number_ver = models.CharField(max_length=100, verbose_name='номер версии')
     name_ver = models.CharField(max_length=100, verbose_name='название версии')
-    sign_ver = models.BooleanField(default=True, verbose_name='признак версии')
+    sign_ver = models.CharField(max_length=50, choices=SIGN_CHOICES, verbose_name='признак версии')
 
     class Meta:
         verbose_name = 'версия'

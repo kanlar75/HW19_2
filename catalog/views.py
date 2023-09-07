@@ -1,11 +1,12 @@
 from django.shortcuts import render
 
-from catalog.models import Product
+from catalog.models import Product, Version
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView, TemplateView
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
+from django.forms import inlineformset_factory
 from pytils.translit import slugify
 
-from catalog.templates.catalog.forms import ProductForm
+from catalog.templates.catalog.forms import ProductForm, VersionForm
 
 
 class IndexView(TemplateView):
@@ -64,7 +65,38 @@ class ProductUpdateView(UpdateView):
     form_class = ProductForm
     success_url = reverse_lazy('catalog:products')
 
+    def get_success_url(self):
+        return reverse('catalog:update', args=[self.kwargs.get('pk')])
+
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        VersionFormSet = inlineformset_factory(Product, Version, form=VersionForm, extra=1)
+        if self.request.method == 'POST':
+            formset = VersionFormSet(self.request.POST, instance=self.object)
+        else:
+            formset = VersionFormSet(instance=self.object)
+        context_data['formset'] = formset
+        return context_data
+
+    def form_valid(self, form):
+        context_data = self.get_context_data()
+        formset = context_data['formset']
+        self.object = form.save()
+        if formset.is_valid():
+            formset.instance = self.object
+            formset.save()
+        return super().form_valid(form)
+
 
 class ProductDeleteView(DeleteView):
     model = Product
     success_url = reverse_lazy('catalog:products')
+
+
+class VersionDetailView(DetailView):
+    model = Version
+    template_name = 'catalog/products.html'
+    context_object_name = 'version'
+    pk_url_kwarg = 'pk'
+
+
