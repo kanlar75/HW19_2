@@ -1,10 +1,10 @@
-# Create your views here.
-from django.shortcuts import render
-
-from catalog.models import Product
+from catalog.models import Product, Version
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView, TemplateView
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
+from django.forms import inlineformset_factory
 from pytils.translit import slugify
+
+from catalog.templates.catalog.forms import ProductForm, VersionForm
 
 
 class IndexView(TemplateView):
@@ -21,7 +21,7 @@ class ContactView(TemplateView):
     }
 
     def get_context_data(self, **kwargs):
-        if self.request.method == 'post':
+        if self.request.method == 'POST':
             name = self.request.POST.get('name')
             phone = self.request.POST.get('phone')
             message = self.request.POST.get('message')
@@ -36,7 +36,16 @@ class ProductsListView(ListView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
+        active_version = Version.objects.filter(sign_ver='active')
         context['title'] = 'Все продукты'
+        for product in context['object_list']:
+            version = active_version.filter(product=product)
+            if version:
+                product.version = {
+                    'name_ver': version[0].name_ver,
+                    'number_ver': version[0].number_ver
+                }
+
         return context
 
 
@@ -49,7 +58,55 @@ class ProductDetailView(DetailView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Подробнее о продукте'
+
         return context
 
 
+class ProductCreateView(CreateView):
+    model = Product
+    form_class = ProductForm
+    success_url = reverse_lazy('catalog:products')
 
+
+class ProductUpdateView(UpdateView):
+    model = Product
+    form_class = ProductForm
+    success_url = reverse_lazy('catalog:products')
+
+    def get_success_url(self):
+        return reverse('catalog:update', args=[self.kwargs.get('pk')])
+
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        VersionFormSet = inlineformset_factory(Product, Version, form=VersionForm, extra=1)
+        if self.request.method == 'POST':
+            formset = VersionFormSet(self.request.POST, instance=self.object)
+        else:
+            formset = VersionFormSet(instance=self.object)
+        context_data['formset'] = formset
+        return context_data
+
+    def form_valid(self, form):
+        context_data = self.get_context_data()
+        formset = context_data['formset']
+        self.object = form.save()
+        if formset.is_valid():
+            formset.instance = self.object
+            formset.save()
+        return super().form_valid(form)
+
+
+class ProductDeleteView(DeleteView):
+    model = Product
+    success_url = reverse_lazy('catalog:products')
+
+
+class VersionListView(ListView):
+    model = Version
+    context_object_name = 'version'
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        queryset = queryset.filter(sign_ver='active')
+
+        return queryset

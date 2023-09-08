@@ -1,6 +1,10 @@
 {% extends 'catalog/base.html' %}
 {% load my_tags %}
 {% block content %}
+<div class="col-12">
+    <a class="btn btn-outline-primary" href="{% url 'catalog:create' %}">Добавить продукт</a>
+</div>
+
   <style>
     .product-card {
       border: 1px solid #ccc;
@@ -36,10 +40,14 @@
 <!--                <img src="{{ product.image|mediapath }}" style="height: 300px"/></img>-->
                 <img src="{% mediapath product.image %}" style="height: 300px"/>
                 <h5 class="card-title">{{ product.name }}</h5>
+                 {% if product.version %}
+                    <h6 class="card-text">Версия - {{ product.version|get_item:'number_ver' }} ({{ product.version|get_item:'name_ver' }})</h6>
+                 {% endif%}
                 <p class="card-text">{{ product.description | truncatechars:50}}</p>
                 <h6 class="card-subtitle mb-2 text-muted">{{product.price}} рублей</h6>
                 <p><a class="btn btn-secondary" href="/product/{{product.pk}}" role="button">Подробнее &raquo;</a></p>
-
+                <a href="{% url 'catalog:update' product.pk %}" class="btn btn-primary my-2">Редактирование</a>
+                <a href="{% url 'catalog:delete' product.pk %}" class="btn btn-primary my-2">Удалить</a>
             </div>
           </div>
         </div>
