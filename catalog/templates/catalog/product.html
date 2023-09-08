@@ -21,6 +21,10 @@
                                 <td>{{ product.name }}</td>
                             </tr>
                             <tr>
+                                <td>Версия</td>
+                                <td><h6 class="card-text">Версия - {{ product.get_ver.all.first.number_ver }}</h6> </td>
+                            </tr>
+                            <tr>
                                 <td>Описание</td>
                                 <td>{{ product.description }}</td>
                             </tr>
