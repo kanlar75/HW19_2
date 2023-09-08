@@ -1,5 +1,3 @@
-from django.shortcuts import render
-
 from catalog.models import Product, Version
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView, TemplateView
 from django.urls import reverse_lazy, reverse
@@ -38,7 +36,16 @@ class ProductsListView(ListView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
+        active_version = Version.objects.filter(sign_ver='active')
         context['title'] = 'Все продукты'
+        for product in context['object_list']:
+            version = active_version.filter(product=product)
+            if version:
+                product.version = {
+                    'name_ver': version[0].name_ver,
+                    'number_ver': version[0].number_ver
+                }
+
         return context
 
 
@@ -51,6 +58,7 @@ class ProductDetailView(DetailView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Подробнее о продукте'
+
         return context
 
 
@@ -93,10 +101,12 @@ class ProductDeleteView(DeleteView):
     success_url = reverse_lazy('catalog:products')
 
 
-class VersionDetailView(DetailView):
+class VersionListView(ListView):
     model = Version
-    template_name = 'catalog/products.html'
     context_object_name = 'version'
-    pk_url_kwarg = 'pk'
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        queryset = queryset.filter(sign_ver='active')
 
+        return queryset

@@ -40,7 +40,9 @@
 <!--                <img src="{{ product.image|mediapath }}" style="height: 300px"/></img>-->
                 <img src="{% mediapath product.image %}" style="height: 300px"/>
                 <h5 class="card-title">{{ product.name }}</h5>
-                <h8 class="card-text">Версия - {{...}}</h8>
+                 {% if product.version %}
+                    <h6 class="card-text">Версия - {{ product.version|get_item:'number_ver' }} ({{ product.version|get_item:'name_ver' }})</h6>
+                 {% endif%}
                 <p class="card-text">{{ product.description | truncatechars:50}}</p>
                 <h6 class="card-subtitle mb-2 text-muted">{{product.price}} рублей</h6>
                 <p><a class="btn btn-secondary" href="/product/{{product.pk}}" role="button">Подробнее &raquo;</a></p>

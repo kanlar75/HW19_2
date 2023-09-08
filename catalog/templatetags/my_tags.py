@@ -3,7 +3,7 @@ from django import template
 register = template.Library()
 
 
-# Создание тега
+# РЎРѕР·РґР°РЅРёРµ С‚РµРіР°
 @register.filter()
 def mediapath(val):
     if val:
@@ -16,3 +16,8 @@ def mediapath(val):
     if val:
         return f'/media/{val}'
     return '#'
+
+
+@register.filter
+def get_item(dictionary, key):
+    return dictionary.get(key)

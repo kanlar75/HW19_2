@@ -1,6 +1,6 @@
 from django import forms
 
-from catalog.models import Product
+from catalog.models import Product, Version
 
 
 class FormMixin:
@@ -43,5 +43,5 @@ class ProductForm(FormMixin, forms.ModelForm):
 
 class VersionForm(FormMixin, forms.ModelForm):
     class Meta:
-        model = Product
+        model = Version
         fields = '__all__'
