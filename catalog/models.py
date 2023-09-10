@@ -1,6 +1,7 @@
-from django.urls import reverse
-
 from django.db import models, connection
+
+from config import settings
+from users.models import User
 
 NULLABLE = {'blank': True, 'null': True}
 
@@ -30,6 +31,7 @@ class Product(models.Model):
     price = models.IntegerField(verbose_name='цена')
     date_create = models.DateField(auto_now_add=True, verbose_name='дата создания')
     date_update = models.DateField(auto_now=True, verbose_name='дата изменения')
+    user_owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, **NULLABLE, verbose_name='пользователь')
 
     def __str__(self):
         return f'{self.name}, {self.category}, {self.price}'
