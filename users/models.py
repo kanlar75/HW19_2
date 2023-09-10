@@ -1,7 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-from catalog.models import NULLABLE
+from materials.models import NULLABLE
 
 
 class User(AbstractUser):
@@ -12,7 +12,14 @@ class User(AbstractUser):
     phone = models.CharField(max_length=35, verbose_name='номер телефона', **NULLABLE)
     country = models.CharField(max_length=150, verbose_name='страна', **NULLABLE)
     avatar = models.ImageField(upload_to='users/', verbose_name='аватар', **NULLABLE)
-    email_verify = models.BooleanField(default=False, verbose_name='верификация', **NULLABLE)
+    verification_key = models.IntegerField(verbose_name='ключ', **NULLABLE)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
+
+    def __str__(self):
+        return f"{self.email}"
+
+    class Meta:
+        verbose_name = 'пользователь'
+        verbose_name_plural = 'пользователи'
