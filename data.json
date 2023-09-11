@@ -1,5 +1,1966 @@
 [
   {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2023-08-15T13:41:58.901Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "рассылки, отправка одного сообщения большому количеству получателей",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2023-08-15T14:05:20.603Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "Рассылка 50, рассылки (отправка одного сообщения большому количеству получателей), 1000",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2023-08-15T14:05:46.287Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "Рассылка 100, рассылки (отправка одного сообщения большому количеству получателей), 2000",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2023-08-15T14:07:15.805Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "3",
+      "object_repr": "Телеграм бот курс доллара, телеграм боты (мини-программы внутри мессенджера, которые управляются текстовыми командами в чате по принципу вопрос  ответ), 5000",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2023-08-15T14:08:20.565Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "4",
+      "object_repr": "Телеграм бот курс евро, телеграм боты (мини-программы внутри мессенджера, которые управляются текстовыми командами в чате по принципу вопрос  ответ), 5000",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2023-08-15T14:10:20.943Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "5",
+      "object_repr": "Деинсталятор ПО, полезные утилиты (вспомогательная компьютерная программа в составе общего программного обеспечения для выполнения специализированных типовых задач), 10000",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2023-08-15T14:11:56.405Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "6",
+      "object_repr": "Редактор реестра, полезные утилиты (вспомогательная компьютерная программа в составе общего программного обеспечения для выполнения специализированных типовых задач), 10000",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2023-08-15T14:13:15.582Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "7",
+      "object_repr": "Новостное Веб-приложение, веб-приложения (программное обеспечение, которое запускается в веб-браузере), 12000",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2023-08-15T14:14:43.915Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "8",
+      "object_repr": "Веб-приложение \"блог обо всем\", веб-приложения (программное обеспечение, которое запускается в веб-браузере), 13000",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2023-08-15T14:16:50.737Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "9",
+      "object_repr": "Поиск книг, микросервисы (веб-сервис, отвечающий за один элемент логики в определенной предметной области), 7000",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2023-08-15T14:19:36.014Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "10",
+      "object_repr": "Микросервис корзины покупок., микросервисы (веб-сервис, отвечающий за один элемент логики в определенной предметной области), 15000",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2023-08-15T14:43:49.441Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "6",
+      "object_repr": "микросервисы (веб-сервис, отвечающий за один элемент логики в определенной предметной области)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2023-08-15T14:43:49.446Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "5",
+      "object_repr": "веб-приложения (программное обеспечение, которое запускается в веб-браузере)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2023-08-15T14:43:49.447Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "4",
+      "object_repr": "полезные утилиты (вспомогательная компьютерная программа в составе общего программного обеспечения для выполнения специализированных типовых задач)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2023-08-15T14:43:49.448Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "телеграм боты (мини-программы внутри мессенджера, которые управляются текстовыми командами в чате по принципу вопрос  ответ)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2023-08-15T14:43:49.449Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "рассылки (отправка одного сообщения большому количеству получателей)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2023-08-15T16:40:51.999Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "5",
+      "object_repr": "микросервисы (веб-сервис, отвечающий за один элемент логики в определенной предметной области)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2023-08-15T16:40:52.003Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "4",
+      "object_repr": "веб-приложения (программное обеспечение, которое запускается в веб-браузере)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2023-08-15T16:40:52.004Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "полезные утилиты (вспомогательная компьютерная программа в составе общего программного обеспечения для выполнения специализированных типовых задач)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2023-08-15T16:40:52.004Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "телеграм боты (мини-программы внутри мессенджера, которые управляются текстовыми командами в чате по принципу вопрос  ответ)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2023-08-15T16:40:52.005Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "рассылки (отправка одного сообщения большому количеству получателей)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2023-08-15T16:55:53.845Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "18",
+      "object_repr": "Микросервис системы оплаты по QR коду., микросервисы (веб-сервис, отвечающий за один элемент логики в определенной предметной области), 9000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2023-08-15T16:55:53.849Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "17",
+      "object_repr": "Веб-приложение 'интернет-магазин', веб-приложения (программное обеспечение, которое запускается в веб-браузере), 15500",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2023-08-15T16:55:53.850Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "16",
+      "object_repr": "Деинсталлятор ПО, полезные утилиты (вспомогательная компьютерная программа в составе общего программного обеспечения для выполнения специализированных типовых задач), 10000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2023-08-15T16:55:53.852Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "15",
+      "object_repr": "Телеграм бот курс валют, телеграм боты (мини-программы внутри мессенджера, которые управляются текстовыми командами в чате по принципу вопрос  ответ), 5000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2023-08-15T16:55:53.853Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "14",
+      "object_repr": "Рассылка 150, рассылки (отправка одного сообщения большому количеству получателей), 1500",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2023-08-15T16:56:03.835Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "5",
+      "object_repr": "микросервисы (веб-сервис, отвечающий за один элемент логики в определенной предметной области)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2023-08-15T16:56:03.840Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "4",
+      "object_repr": "веб-приложения (программное обеспечение, которое запускается в веб-браузере)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2023-08-15T16:56:03.841Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "полезные утилиты (вспомогательная компьютерная программа в составе общего программного обеспечения для выполнения специализированных типовых задач)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2023-08-15T16:56:03.844Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "телеграм боты (мини-программы внутри мессенджера, которые управляются текстовыми командами в чате по принципу вопрос  ответ)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2023-08-15T16:56:03.844Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "рассылки (отправка одного сообщения большому количеству получателей)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2023-08-16T03:01:36.579Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "28",
+      "object_repr": "Микросервис системы оплаты по QR коду., микросервисы (веб-сервис, отвечающий за один элемент логики в определенной предметной области), 9000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2023-08-16T03:01:36.584Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "27",
+      "object_repr": "Веб-приложение 'интернет-магазин', веб-приложения (программное обеспечение, которое запускается в веб-браузере), 15500",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2023-08-16T03:01:36.585Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "26",
+      "object_repr": "Деинсталлятор ПО, полезные утилиты (вспомогательная компьютерная программа в составе общего программного обеспечения для выполнения специализированных типовых задач), 10000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2023-08-16T03:01:36.586Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "25",
+      "object_repr": "Телеграм бот курс валют, телеграм боты (мини-программы внутри мессенджера, которые управляются текстовыми командами в чате по принципу вопрос  ответ), 5000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2023-08-16T03:01:36.587Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "24",
+      "object_repr": "Рассылка 150, рассылки (отправка одного сообщения большому количеству получателей), 1500",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2023-08-16T03:01:50.829Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "5",
+      "object_repr": "микросервисы (веб-сервис, отвечающий за один элемент логики в определенной предметной области)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2023-08-16T03:01:50.835Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "4",
+      "object_repr": "веб-приложения (программное обеспечение, которое запускается в веб-браузере)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+      "action_time": "2023-08-16T03:01:50.836Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "полезные утилиты (вспомогательная компьютерная программа в составе общего программного обеспечения для выполнения специализированных типовых задач)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+      "action_time": "2023-08-16T03:01:50.836Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "телеграм боты (мини-программы внутри мессенджера, которые управляются текстовыми командами в чате по принципу вопрос  ответ)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+      "action_time": "2023-08-16T03:01:50.837Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "рассылки (отправка одного сообщения большому количеству получателей)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+      "action_time": "2023-08-16T03:02:58.109Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "33",
+      "object_repr": "Микросервис системы оплаты по QR коду., микросервисы (веб-сервис, отвечающий за один элемент логики в определенной предметной области), 9000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+      "action_time": "2023-08-16T03:02:58.113Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "32",
+      "object_repr": "Веб-приложение 'интернет-магазин', веб-приложения (программное обеспечение, которое запускается в веб-браузере), 15500",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+      "action_time": "2023-08-16T03:02:58.115Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "31",
+      "object_repr": "Деинсталлятор ПО, полезные утилиты (вспомогательная компьютерная программа в составе общего программного обеспечения для выполнения специализированных типовых задач), 10000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+      "action_time": "2023-08-16T03:02:58.115Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "30",
+      "object_repr": "Телеграм бот курс валют, телеграм боты (мини-программы внутри мессенджера, которые управляются текстовыми командами в чате по принципу вопрос  ответ), 5000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+      "action_time": "2023-08-16T03:02:58.116Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "29",
+      "object_repr": "Рассылка 150, рассылки (отправка одного сообщения большому количеству получателей), 1500",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+      "action_time": "2023-08-16T03:03:09.795Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "5",
+      "object_repr": "микросервисы (веб-сервис, отвечающий за один элемент логики в определенной предметной области)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+      "action_time": "2023-08-16T03:03:09.798Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "4",
+      "object_repr": "веб-приложения (программное обеспечение, которое запускается в веб-браузере)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+      "action_time": "2023-08-16T03:03:09.800Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "полезные утилиты (вспомогательная компьютерная программа в составе общего программного обеспечения для выполнения специализированных типовых задач)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+      "action_time": "2023-08-16T03:03:09.801Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "телеграм боты (мини-программы внутри мессенджера, которые управляются текстовыми командами в чате по принципу вопрос  ответ)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+      "action_time": "2023-08-16T03:03:09.801Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "рассылки (отправка одного сообщения большому количеству получателей)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+      "action_time": "2023-08-20T08:18:16.886Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "38",
+      "object_repr": "Микросервис системы оплаты по QR коду., микросервисы (веб-сервис, отвечающий за один элемент логики в определенной предметной области), 9000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+      "action_time": "2023-08-20T08:18:16.892Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "37",
+      "object_repr": "Веб-приложение 'интернет-магазин', веб-приложения (программное обеспечение, которое запускается в веб-браузере), 15500",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+      "action_time": "2023-08-20T08:18:16.893Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "36",
+      "object_repr": "Деинсталлятор ПО, полезные утилиты (вспомогательная компьютерная программа в составе общего программного обеспечения для выполнения специализированных типовых задач), 10000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+      "action_time": "2023-08-20T08:18:16.894Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "35",
+      "object_repr": "Телеграм бот курс валют, телеграм боты (мини-программы внутри мессенджера, которые управляются текстовыми командами в чате по принципу вопрос  ответ), 5000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+      "action_time": "2023-08-20T08:18:16.895Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "34",
+      "object_repr": "Рассылка 150, рассылки (отправка одного сообщения большому количеству получателей), 1500",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+      "action_time": "2023-08-20T08:21:02.096Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "38",
+      "object_repr": "╠шъЁюёхЁтшё ёшёЄхь√ юяырЄ√ яю QR ъюфє., ьшъЁюёхЁтшё√ (тхс-ёхЁтшё, юЄтхўр■∙шщ чр юфшэ ¤ыхьхэЄ ыюушъш т юяЁхфхыхээющ яЁхфьхЄэющ юсырёЄш), 9000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+      "action_time": "2023-08-20T08:21:02.102Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "37",
+      "object_repr": "┬хс-яЁшыюцхэшх 'шэЄхЁэхЄ-ьрурчшэ', тхс-яЁшыюцхэш  (яЁюуЁрььэюх юсхёяхўхэшх, ъюЄюЁюх чряєёърхЄё  т тхс-сЁрєчхЁх), 15500",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+      "action_time": "2023-08-20T08:21:02.103Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "36",
+      "object_repr": "─хшэёЄрыы ЄюЁ ╧╬, яюыхчэ√х єЄшышЄ√ (тёяюьюурЄхы№эр  ъюья№■ЄхЁэр  яЁюуЁрььр т ёюёЄртх юс∙хую яЁюуЁрььэюую юсхёяхўхэш  фы  т√яюыэхэш  ёяхЎшрышчшЁютрээ√ї Єшяют√ї чрфрў), 10000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+      "action_time": "2023-08-20T08:21:02.104Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "35",
+      "object_repr": "╥хыхуЁрь сюЄ ъєЁё тры■Є, ЄхыхуЁрь сюЄ√ (ьшэш-яЁюуЁрьь√ тэєЄЁш ьхёёхэфцхЁр, ъюЄюЁ√х єяЁрты ■Єё  ЄхъёЄют√ьш ъюьрэфрьш т ўрЄх яю яЁшэЎшяє тюяЁюё  юЄтхЄ), 5000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+      "action_time": "2023-08-20T08:21:02.106Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "34",
+      "object_repr": "╨рёё√ыър 150, Ёрёё√ыъш (юЄяЁртър юфэюую ёююс∙хэш  сюы№°юьє ъюышўхёЄтє яюыєўрЄхыхщ), 1500",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+      "action_time": "2023-08-20T08:21:02.106Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "10",
+      "object_repr": "Микросервис корзины покупок., ьшъЁюёхЁтшё√ (тхс-ёхЁтшё, юЄтхўр■∙шщ чр юфшэ ¤ыхьхэЄ ыюушъш т юяЁхфхыхээющ яЁхфьхЄэющ юсырёЄш), 15000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+      "action_time": "2023-08-20T08:21:02.107Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "9",
+      "object_repr": "Микросервис системы оплаты., ьшъЁюёхЁтшё√ (тхс-ёхЁтшё, юЄтхўр■∙шщ чр юфшэ ¤ыхьхэЄ ыюушъш т юяЁхфхыхээющ яЁхфьхЄэющ юсырёЄш), 7000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+      "action_time": "2023-08-20T08:21:02.107Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "8",
+      "object_repr": "Веб-приложение 'блог обо всем', тхс-яЁшыюцхэш  (яЁюуЁрььэюх юсхёяхўхэшх, ъюЄюЁюх чряєёърхЄё  т тхс-сЁрєчхЁх), 13000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+      "action_time": "2023-08-20T08:21:02.108Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "7",
+      "object_repr": "Новостное Веб-приложение, тхс-яЁшыюцхэш  (яЁюуЁрььэюх юсхёяхўхэшх, ъюЄюЁюх чряєёърхЄё  т тхс-сЁрєчхЁх), 12000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+      "action_time": "2023-08-20T08:21:02.109Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "6",
+      "object_repr": "Редактор реестра, яюыхчэ√х єЄшышЄ√ (тёяюьюурЄхы№эр  ъюья№■ЄхЁэр  яЁюуЁрььр т ёюёЄртх юс∙хую яЁюуЁрььэюую юсхёяхўхэш  фы  т√яюыэхэш  ёяхЎшрышчшЁютрээ√ї Єшяют√ї чрфрў), 10000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+      "action_time": "2023-08-20T08:21:02.110Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "5",
+      "object_repr": "Деинсталлятор ПО, яюыхчэ√х єЄшышЄ√ (тёяюьюурЄхы№эр  ъюья№■ЄхЁэр  яЁюуЁрььр т ёюёЄртх юс∙хую яЁюуЁрььэюую юсхёяхўхэш  фы  т√яюыэхэш  ёяхЎшрышчшЁютрээ√ї Єшяют√ї чрфрў), 10000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+      "action_time": "2023-08-20T08:21:02.112Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "4",
+      "object_repr": "Телеграм бот курс ЕВРО, ЄхыхуЁрь сюЄ√ (ьшэш-яЁюуЁрьь√ тэєЄЁш ьхёёхэфцхЁр, ъюЄюЁ√х єяЁрты ■Єё  ЄхъёЄют√ьш ъюьрэфрьш т ўрЄх яю яЁшэЎшяє тюяЁюё  юЄтхЄ), 5000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+      "action_time": "2023-08-20T08:21:02.112Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "3",
+      "object_repr": "Телеграм бот курс доллара, ЄхыхуЁрь сюЄ√ (ьшэш-яЁюуЁрьь√ тэєЄЁш ьхёёхэфцхЁр, ъюЄюЁ√х єяЁрты ■Єё  ЄхъёЄют√ьш ъюьрэфрьш т ўрЄх яю яЁшэЎшяє тюяЁюё  юЄтхЄ), 5000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+      "action_time": "2023-08-20T08:21:02.113Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "Рассылка 100, Ёрёё√ыъш (юЄяЁртър юфэюую ёююс∙хэш  сюы№°юьє ъюышўхёЄтє яюыєўрЄхыхщ), 2000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+      "action_time": "2023-08-20T08:21:02.114Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "Рассылка 50, Ёрёё√ыъш (юЄяЁртър юфэюую ёююс∙хэш  сюы№°юьє ъюышўхёЄтє яюыєўрЄхыхщ), 1000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+      "action_time": "2023-08-20T08:21:13.709Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "5",
+      "object_repr": "ьшъЁюёхЁтшё√ (тхс-ёхЁтшё, юЄтхўр■∙шщ чр юфшэ ¤ыхьхэЄ ыюушъш т юяЁхфхыхээющ яЁхфьхЄэющ юсырёЄш)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+      "action_time": "2023-08-20T08:21:13.712Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "4",
+      "object_repr": "тхс-яЁшыюцхэш  (яЁюуЁрььэюх юсхёяхўхэшх, ъюЄюЁюх чряєёърхЄё  т тхс-сЁрєчхЁх)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+      "action_time": "2023-08-20T08:21:13.713Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "яюыхчэ√х єЄшышЄ√ (тёяюьюурЄхы№эр  ъюья№■ЄхЁэр  яЁюуЁрььр т ёюёЄртх юс∙хую яЁюуЁрььэюую юсхёяхўхэш  фы  т√яюыэхэш  ёяхЎшрышчшЁютрээ√ї Єшяют√ї чрфрў)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+      "action_time": "2023-08-20T08:21:13.713Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "ЄхыхуЁрь сюЄ√ (ьшэш-яЁюуЁрьь√ тэєЄЁш ьхёёхэфцхЁр, ъюЄюЁ√х єяЁрты ■Єё  ЄхъёЄют√ьш ъюьрэфрьш т ўрЄх яю яЁшэЎшяє тюяЁюё  юЄтхЄ)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+      "action_time": "2023-08-20T08:21:13.714Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "Ёрёё√ыъш (юЄяЁртър юфэюую ёююс∙хэш  сюы№°юьє ъюышўхёЄтє яюыєўрЄхыхщ)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+      "action_time": "2023-08-21T15:17:48.547Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "11",
+      "object_repr": "Рассылка 200, рассылки (отправка одного сообщения большому количеству получателей), 3000",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+      "action_time": "2023-08-21T15:18:13.869Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "12",
+      "object_repr": "Рассылка 500, рассылки (отправка одного сообщения большому количеству получателей), 5000",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+      "action_time": "2023-08-21T15:21:06.563Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "13",
+      "object_repr": "Телеграм бот курс валют, телеграм боты (мини-программы внутри мессенджера, которые управляются текстовыми командами в чате по принципу вопрос  ответ), 8000",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+      "action_time": "2023-08-21T15:23:35.083Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "14",
+      "object_repr": "Веб приложение под заказ, веб-приложения (программное обеспечение, которое запускается в веб-браузере.), 15000",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+      "action_time": "2023-08-21T16:50:22.276Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "8",
+      "object_repr": "Веб-приложение 'блог обо всем', веб-приложения (программное обеспечение, которое запускается в веб-браузере.), 13000",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+      "action_time": "2023-08-21T18:17:19.793Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "15",
+      "object_repr": "Телеграм бот Доска объявлений, телеграм боты (мини-программы внутри мессенджера, которые управляются текстовыми командами в чате по принципу вопрос  ответ), 15000",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+      "action_time": "2023-08-25T16:23:18.101Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Новая статья",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+      "action_time": "2023-08-25T16:23:52.137Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Новая статья",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043e\\u0434\\u0435\\u0440\\u0436\\u0438\\u043c\\u043e\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+      "action_time": "2023-08-26T12:25:12.434Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Новая статья",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043e\\u0434\\u0435\\u0440\\u0436\\u0438\\u043c\\u043e\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+      "action_time": "2023-08-26T12:26:05.247Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "2",
+      "object_repr": "Вторая статья",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+      "action_time": "2023-08-26T13:27:26.366Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "3",
+      "object_repr": "Третья статья",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+      "action_time": "2023-08-27T05:25:28.179Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "9",
+      "object_repr": "test",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+      "action_time": "2023-08-27T05:25:28.190Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "8",
+      "object_repr": "Четвертая статья",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+      "action_time": "2023-08-27T05:25:28.191Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "7",
+      "object_repr": "Четвертая статья",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+      "action_time": "2023-08-27T05:25:28.192Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "6",
+      "object_repr": "Четвертая статья",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 92,
+    "fields": {
+      "action_time": "2023-08-27T05:25:28.192Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "5",
+      "object_repr": "Четвертая статья",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 93,
+    "fields": {
+      "action_time": "2023-08-27T05:25:28.193Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "4",
+      "object_repr": "Четвертая статья",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 94,
+    "fields": {
+      "action_time": "2023-08-27T05:25:28.194Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "3",
+      "object_repr": "Третья статья",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 95,
+    "fields": {
+      "action_time": "2023-08-27T05:25:28.195Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "2",
+      "object_repr": "Вторая статья",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 96,
+    "fields": {
+      "action_time": "2023-08-27T05:25:28.195Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Новая статья",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 97,
+    "fields": {
+      "action_time": "2023-08-27T06:30:50.775Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "11",
+      "object_repr": "Вторая статья",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 98,
+    "fields": {
+      "action_time": "2023-08-27T06:30:54.871Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "10",
+      "object_repr": "Первая статья",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 99,
+    "fields": {
+      "action_time": "2023-08-27T07:26:46.734Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "15",
+      "object_repr": "Новая статья",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 100,
+    "fields": {
+      "action_time": "2023-08-27T07:26:46.739Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "14",
+      "object_repr": "2222",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 101,
+    "fields": {
+      "action_time": "2023-08-27T07:26:46.741Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "13",
+      "object_repr": "2222",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 102,
+    "fields": {
+      "action_time": "2023-08-27T07:26:46.741Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "12",
+      "object_repr": "Первая статья",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 103,
+    "fields": {
+      "action_time": "2023-08-27T16:19:07.284Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "4",
+      "object_repr": "Четвертая статья",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u0430 \\u0438\\u043b\\u0438 \\u043d\\u0435\\u0442\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 104,
+    "fields": {
+      "action_time": "2023-09-06T18:03:21.897Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "1 / (Первая версия)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 105,
+    "fields": {
+      "action_time": "2023-09-06T18:03:52.199Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "2",
+      "object_repr": "2 / (Вторая версия)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 106,
+    "fields": {
+      "action_time": "2023-09-08T18:19:07.991Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "9",
+      "object_repr": "Микросервис корзины., микросервисы, 15000 - 14/(Четырнадцать)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u0438\\u0437\\u043d\\u0430\\u043a \\u0432\\u0435\\u0440\\u0441\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 107,
+    "fields": {
+      "action_time": "2023-09-08T18:19:13.048Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "8",
+      "object_repr": "Микросервис системы оплаты., микросервисы, 7000 - 12/(Двенадцать)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u0438\\u0437\\u043d\\u0430\\u043a \\u0432\\u0435\\u0440\\u0441\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 108,
+    "fields": {
+      "action_time": "2023-09-08T18:19:17.481Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "7",
+      "object_repr": "Редактор реестра, полезные утилиты, 10000 - 25/(Двадцать пять)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u0438\\u0437\\u043d\\u0430\\u043a \\u0432\\u0435\\u0440\\u0441\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 109,
+    "fields": {
+      "action_time": "2023-09-08T18:19:21.594Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "Бот курс доллара, телеграм боты, 5000 - 1/(Первая версия)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 110,
+    "fields": {
+      "action_time": "2023-09-08T18:19:26.999Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "4",
+      "object_repr": "Бот курс доллара, телеграм боты, 5000 - 2/(Вторая версия)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u0438\\u0437\\u043d\\u0430\\u043a \\u0432\\u0435\\u0440\\u0441\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 111,
+    "fields": {
+      "action_time": "2023-09-08T18:58:58.545Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "9",
+      "object_repr": "Микросервис корзины., микросервисы, 15000 - 14/(Четырнадцать)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u0438\\u0437\\u043d\\u0430\\u043a \\u0432\\u0435\\u0440\\u0441\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add категория",
+      "content_type": 7,
+      "codename": "add_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change категория",
+      "content_type": 7,
+      "codename": "change_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete категория",
+      "content_type": 7,
+      "codename": "delete_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view категория",
+      "content_type": 7,
+      "codename": "view_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add продукт",
+      "content_type": 8,
+      "codename": "add_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change продукт",
+      "content_type": 8,
+      "codename": "change_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete продукт",
+      "content_type": 8,
+      "codename": "delete_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view продукт",
+      "content_type": 8,
+      "codename": "view_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add статья",
+      "content_type": 9,
+      "codename": "add_article"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change статья",
+      "content_type": 9,
+      "codename": "change_article"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete статья",
+      "content_type": 9,
+      "codename": "delete_article"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view статья",
+      "content_type": 9,
+      "codename": "view_article"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add статья",
+      "content_type": 10,
+      "codename": "add_article"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change статья",
+      "content_type": 10,
+      "codename": "change_article"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete статья",
+      "content_type": 10,
+      "codename": "delete_article"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view статья",
+      "content_type": 10,
+      "codename": "view_article"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add версия",
+      "content_type": 11,
+      "codename": "add_version"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change версия",
+      "content_type": 11,
+      "codename": "change_version"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete версия",
+      "content_type": 11,
+      "codename": "delete_version"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view версия",
+      "content_type": 11,
+      "codename": "view_version"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$bkHBDtI4BKkJo0vLcvHj3H$fA7R74JQPs/GWpdHk/OEG49WGpo8P1GBUYmPjfQVb0Y=",
+      "last_login": "2023-09-06T13:25:12.740Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "kls75@yandex.ru",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-08-15T11:49:18.538Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "catalog",
+      "model": "category"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "catalog",
+      "model": "product"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "catalog",
+      "model": "article"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "materials",
+      "model": "article"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "catalog",
+      "model": "version"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "rv0bfnkg4g4ezfp90frnru55hygulgwu",
+    "fields": {
+      "session_data": ".eJxVjDsOwyAQBe9CHSHAfEzK9D4DWtglOIlAMnYV5e6xJRdJ-2bmvVmAbS1h67SEGdmVSXb53SKkJ9UD4APqvfHU6rrMkR8KP2nnU0N63U7376BAL3ttszQStVNJjgM6ck7YhKOS2hMOlBWlGM0APgImK4zyOxDkJZA2CJl9vuI1OGU:1qVsZu:-t_dFhWn1adpV4Nbz8xgjS-TBtllrbQRw2y1V4PnzA8",
+      "expire_date": "2023-08-29T11:51:14.967Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "vny5yr9ntxemdqle6tyqkyp4f4rcrs1s",
+    "fields": {
+      "session_data": ".eJxVjDsOwyAQBe9CHSHAfEzK9D4DWtglOIlAMnYV5e6xJRdJ-2bmvVmAbS1h67SEGdmVSXb53SKkJ9UD4APqvfHU6rrMkR8KP2nnU0N63U7376BAL3ttszQStVNJjgM6ck7YhKOS2hMOlBWlGM0APgImK4zyOxDkJZA2CJl9vuI1OGU:1qdsWu:pIPbPw4LaAVc2XKgIL0nqMBvtVBFdP95m41EHVXtSNY",
+      "expire_date": "2023-09-20T13:25:12.743Z"
+    }
+  },
+  {
     "model": "catalog.category",
     "pk": 1,
     "fields": {
@@ -49,7 +2010,7 @@
       "category": 1,
       "price": 1000,
       "date_create": "2023-08-20",
-      "date_update": "2023-08-20"
+      "date_update": "2023-09-06"
     }
   },
   {
@@ -62,7 +2023,7 @@
       "category": 1,
       "price": 2000,
       "date_create": "2023-08-20",
-      "date_update": "2023-08-20"
+      "date_update": "2023-09-06"
     }
   },
   {
@@ -75,7 +2036,7 @@
       "category": 2,
       "price": 5000,
       "date_create": "2023-08-20",
-      "date_update": "2023-08-20"
+      "date_update": "2023-09-06"
     }
   },
   {
@@ -88,7 +2049,7 @@
       "category": 2,
       "price": 5000,
       "date_create": "2023-08-20",
-      "date_update": "2023-08-20"
+      "date_update": "2023-09-06"
     }
   },
   {
@@ -101,7 +2062,7 @@
       "category": 3,
       "price": 10000,
       "date_create": "2023-08-20",
-      "date_update": "2023-08-20"
+      "date_update": "2023-09-08"
     }
   },
   {
@@ -114,7 +2075,7 @@
       "category": 3,
       "price": 10000,
       "date_create": "2023-08-20",
-      "date_update": "2023-08-20"
+      "date_update": "2023-09-08"
     }
   },
   {
@@ -127,7 +2088,7 @@
       "category": 4,
       "price": 12000,
       "date_create": "2023-08-20",
-      "date_update": "2023-08-20"
+      "date_update": "2023-09-06"
     }
   },
   {
@@ -140,7 +2101,7 @@
       "category": 5,
       "price": 7000,
       "date_create": "2023-08-20",
-      "date_update": "2023-08-20"
+      "date_update": "2023-09-08"
     }
   },
   {
@@ -153,7 +2114,7 @@
       "category": 5,
       "price": 15000,
       "date_create": "2023-08-20",
-      "date_update": "2023-08-20"
+      "date_update": "2023-09-08"
     }
   },
   {
@@ -166,7 +2127,7 @@
       "category": 1,
       "price": 3000,
       "date_create": "2023-08-21",
-      "date_update": "2023-08-21"
+      "date_update": "2023-09-08"
     }
   },
   {
@@ -205,7 +2166,7 @@
       "category": 4,
       "price": 15000,
       "date_create": "2023-08-21",
-      "date_update": "2023-08-21"
+      "date_update": "2023-09-06"
     }
   },
   {
@@ -219,6 +2180,135 @@
       "price": 15000,
       "date_create": "2023-08-21",
       "date_update": "2023-08-21"
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 1,
+    "fields": {
+      "product": 3,
+      "number_ver": "1",
+      "name_ver": "Первая версия",
+      "sign_ver": "no_active"
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 4,
+    "fields": {
+      "product": 3,
+      "number_ver": "2",
+      "name_ver": "Вторая версия",
+      "sign_ver": "no_active"
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 5,
+    "fields": {
+      "product": 5,
+      "number_ver": "1",
+      "name_ver": "Первая версия",
+      "sign_ver": "active"
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 6,
+    "fields": {
+      "product": 5,
+      "number_ver": "2",
+      "name_ver": "Вторая версия",
+      "sign_ver": "no_active"
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 7,
+    "fields": {
+      "product": 6,
+      "number_ver": "25",
+      "name_ver": "Двадцать пять",
+      "sign_ver": "no_active"
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 8,
+    "fields": {
+      "product": 9,
+      "number_ver": "12",
+      "name_ver": "Двенадцать",
+      "sign_ver": "no_active"
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 9,
+    "fields": {
+      "product": 10,
+      "number_ver": "15",
+      "name_ver": "Пятнадцать",
+      "sign_ver": "active"
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 10,
+    "fields": {
+      "product": 10,
+      "number_ver": "14",
+      "name_ver": "Четырнадцать",
+      "sign_ver": "active"
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 11,
+    "fields": {
+      "product": 11,
+      "number_ver": "12",
+      "name_ver": "Двенадцать",
+      "sign_ver": "active"
+    }
+  },
+  {
+    "model": "materials.article",
+    "pk": 4,
+    "fields": {
+      "title": "Четвертая статья",
+      "slug": "chetvertaya-statya",
+      "body": "44444",
+      "date_create": "2023-08-27",
+      "preview": "",
+      "is_published": false,
+      "views_count": 0
+    }
+  },
+  {
+    "model": "materials.article",
+    "pk": 6,
+    "fields": {
+      "title": "Кошка",
+      "slug": "koshka",
+      "body": "Кошка (лат. Felis catus) — домашнее животное, одно из наиболее популярных (наряду с собакой) «животных-компаньонов». С точки зрения научной систематики, домашняя кошка — млекопитающее семейства кошачьих отряда хищных",
+      "date_create": "2023-08-27",
+      "preview": "blog/DSC09072_WNhB35g.JPG",
+      "is_published": true,
+      "views_count": 12
+    }
+  },
+  {
+    "model": "materials.article",
+    "pk": 8,
+    "fields": {
+      "title": "Собака",
+      "slug": "sobaka",
+      "body": "Соба́ка (лат. Canis familiaris, или Canis lupus familiaris) — домашнее животное, одно из наиболее популярных (наряду с кошкой) животных-компаньонов.\r\n\r\nДомашняя собака была описана как самостоятельный биологический вид Canis familiaris Линнеем в 1758 году; в настоящее время данное научное название признаётся организациями, такими как Американское общество маммалогов[2][3][4]. Некоторые источники (например, ITIS и MSW3) признают собаку подвидом волка (Canis lupus familiaris)[5][6]. В русскоязычных письменных источниках слово «собака» в значении соответствующего животного встречается по крайней мере с 1475 года (начиная с грамоты князя Андрея Васильевича Меньшого Кириллову монастырю)[7][8].",
+      "date_create": "2023-08-27",
+      "preview": "blog/velsh-korgi-kardigan.jpg",
+      "is_published": true,
+      "views_count": 5
     }
   }
 ]
