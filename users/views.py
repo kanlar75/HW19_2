@@ -2,7 +2,9 @@ import random
 
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy, reverse
-from django.views.generic import CreateView, UpdateView
+from django.views.generic import CreateView, UpdateView, FormView
+
+from catalog.forms import ContactForm
 from .models import User
 from .forms import UserRegisterForm, UserProfileForm
 from django.core.mail import send_mail
@@ -22,8 +24,8 @@ class RegisterView(CreateView):
         self.object.save()
         send_mail(
             subject='Регистрация',
-            message= f'Вы зарегистрировались на нашем сайте. Для подтверждения регистрации перейдите по ссылке: '
-                  f'http://127.0.0.1:8000/users/verification/{self.object.verification_key}',
+            message=f'Вы зарегистрировались на нашем сайте. Для подтверждения регистрации перейдите по ссылке: '
+                    f'http://127.0.0.1:8000/users/verification/{self.object.verification_key}',
             from_email=settings.EMAIL_HOST_USER,
             recipient_list=[self.object.email]
         )
@@ -81,3 +83,6 @@ def password_reset_view(request):
         return redirect('users:login')
 
     return render(request, 'users/reset_password.html')
+
+
+

@@ -1,6 +1,7 @@
 from django import forms
 
 from catalog.models import Product, Version
+from django.forms.models import BaseInlineFormSet
 
 
 class FormMixin:
@@ -8,6 +9,12 @@ class FormMixin:
         super().__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control'
+
+
+class ContactForm(FormMixin, forms.Form):
+    name = forms.CharField(label='Имя', max_length=255)
+    email = forms.EmailField(label='Email')
+    content = forms.CharField(label='Сообщение', widget=forms.Textarea(attrs={'cols': 60, 'rows': 10}))
 
 
 class ProductForm(FormMixin, forms.ModelForm):
@@ -45,3 +52,15 @@ class VersionForm(FormMixin, forms.ModelForm):
     class Meta:
         model = Version
         fields = '__all__'
+
+
+class VersionFormSet(forms.BaseInlineFormSet):
+
+    def clean(self):
+        super().clean
+        direct_ancestor_count = 0
+        for form in self.forms:
+            if form['is_direct_ancestor'].data:
+                direct_ancestor_count += 1
+                if direct_ancestor_count > 1:
+                    raise forms.ValidationError('Активной может быть только одна версия!')

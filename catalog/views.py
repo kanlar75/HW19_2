@@ -1,10 +1,11 @@
 from catalog.models import Product, Version
-from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView, TemplateView
+from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView, TemplateView, FormView
 from django.urls import reverse_lazy, reverse
 from django.forms import inlineformset_factory
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import redirect
 
-from catalog.forms import ProductForm, VersionForm
+from catalog.forms import ProductForm, VersionForm, ContactForm
 
 
 class IndexView(TemplateView):
@@ -12,21 +13,6 @@ class IndexView(TemplateView):
     extra_context = {
         'title': 'Главная'
     }
-
-
-class ContactView(TemplateView):
-    template_name = 'catalog/contacts.html'
-    extra_context = {
-        'title': 'Контакты'
-    }
-
-    def get_context_data(self, **kwargs):
-        if self.request.method == 'POST':
-            name = self.request.POST.get('name')
-            phone = self.request.POST.get('phone')
-            message = self.request.POST.get('message')
-            print(f'You have new message from {name}({phone}): {message}')
-        return super().get_context_data(**kwargs)
 
 
 class ProductsListView(LoginRequiredMixin, ListView):
@@ -72,9 +58,8 @@ class ProductCreateView(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         self.object = form.save()
-        self.object = self.request.user
+        self.object.user_owner = self.request.user
         self.object.save()
-
         return super().form_valid(form)
 
 
@@ -123,3 +108,18 @@ class VersionListView(LoginRequiredMixin, ListView):
         queryset = queryset.filter(sign_ver='active')
 
         return queryset
+
+
+class ContactFormView(FormView):
+    form_class = ContactForm
+    template_name = 'catalog/contact.html'
+    success_url = reverse_lazy('/')
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Контакты'
+        return context
+
+    def form_valid(self, form):
+        print(form.cleaned_data)
+        return redirect('/')

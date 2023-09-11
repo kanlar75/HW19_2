@@ -1,0 +1,45 @@
+{% extends 'catalog/base.html' %}
+
+{% block content %}
+<!--<h1>{{title}}</h1>-->
+<div class="row">
+
+
+<div class="col">
+            <div class="card">
+                <h5 class="card-title">Контакты:</h5>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <tr>
+                            <td class="w-15">Страна</td>
+                            <td>USA</td>
+                        </tr>
+                        <tr>
+                            <td class="w-15">ИНН</td>
+                            <td>91-1144442</td>
+                        </tr>
+                        <tr>
+                            <td class="w-15">Адрес</td>
+                            <td>Redmond,WA,98052-6399</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+    </div>
+
+        <div class="col">
+            <div class="card>">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-error">{{ form.non_field_errors }}</div>
+                    {% for f in form %}
+                    <p><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
+                    <div class="form-error">{{ f.errors }}</div>
+                    {% endfor %}
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+
+
+        {% endblock %}
