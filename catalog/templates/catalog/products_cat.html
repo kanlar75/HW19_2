@@ -3,6 +3,7 @@
 {% block content %}
 <div class="col-12">
     <a class="btn btn-outline-primary" href="{% url 'catalog:create' %}">Добавить продукт</a>
+    <a class="btn btn-outline-primary" href="{% url 'catalog:categories' %}">Назад</a>
 </div>
 
 <style>
@@ -33,28 +34,28 @@
         </div>
     </div>
     <div class="row justify-content-center">
-        {% for product in products %}
+        {% for object in object_list %}
         <div class="col-md-4 mb-4">
             <div class="card product-card">
                 <div class="card-body">
                     <!--                <img src="{{ product.image|mediapath }}" style="height: 300px"/></img>-->
-                    <img src="{% mediapath product.image %}" style="height: 300px"/>
-                    <h5 class="card-title">{{ product.name }}</h5>
+                    <img src="{% mediapath object.image %}" style="height: 300px"/>
+                    <h5 class="card-title">{{ object.name }}</h5>
                     {% if product.version %}
-                        <h6 class="card-text">Версия - {{ product.version|get_item:'number_ver' }} ({{ product.version|get_item:'name_ver' }})</h6>
+                        <h6 class="card-text">Версия - {{ object.version|get_item:'number_ver' }} ({{ object.version|get_item:'name_ver' }})</h6>
                     {% else %}
                         <br/>
                     {% endif%}
-                    <p class="card-text">{{ product.description | truncatechars:50}}</p>
-                    <h6 class="card-subtitle mb-2 text-muted">{{product.price}} рублей</h6>
-                    <p><a class="btn btn-secondary" href="/product/{{product.pk}}" role="button">Подробнее &raquo;</a>
+                    <p class="card-text">{{ object.description | truncatechars:50}}</p>
+                    <h6 class="card-subtitle mb-2 text-muted">{{object.price}} рублей</h6>
+                    <p><a class="btn btn-secondary" href="/product/{{object.pk}}" role="button">Подробнее &raquo;</a>
                     </p>
-                    <a href="{% url 'catalog:update' product.pk %}" class="btn btn-primary my-2">Редактирование</a>
-                    <a href="{% url 'catalog:delete' product.pk %}" class="btn btn-primary my-2">Удалить</a>
+                    <a href="{% url 'catalog:update' object.pk %}" class="btn btn-primary my-2">Редактирование</a>
+                    <a href="{% url 'catalog:delete' object.pk %}" class="btn btn-primary my-2">Удалить</a>
                 </div>
             </div>
             <div class="card-footer">
-                    <p class="card-text mute">Добавлено: {{product.user_owner|default:"-"}}</p>
+                    <p class="card-text mute">Добавлено: {{object.user_owner|default:"-"}}</p>
             </div>
         </div>
         {% endfor %}

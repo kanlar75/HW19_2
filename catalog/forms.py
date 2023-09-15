@@ -57,7 +57,7 @@ class VersionForm(FormMixin, forms.ModelForm):
 class VersionFormSet(forms.BaseInlineFormSet):
 
     def clean(self):
-        super().clean
+        super().clean()
         direct_ancestor_count = 0
         for form in self.forms:
             if form['is_direct_ancestor'].data:
