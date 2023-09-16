@@ -149,4 +149,6 @@ class ContactFormView(FormView):
         return context
 
     def form_valid(self, form):
+        if form.is_valid():
+            print(form.cleaned_data)
         return redirect('/')

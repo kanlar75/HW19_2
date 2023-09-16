@@ -134,7 +134,7 @@ EMAIL_USE_SSL = True
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 
-CACHE_ENABLED = os.getenv('CACHE_ENABLED') == 1
+CACHE_ENABLED = os.getenv('CACHE_ENABLED')
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.redis.RedisCache',
