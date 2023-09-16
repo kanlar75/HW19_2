@@ -1,0 +1,13 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+<div class="container">
+    <div class="center">
+        <h1>{{title}}:</h1>
+    </div>
+    {% for object in object_list %}
+    <ul class="list-unstyled text-small">
+        <a class="text-muted" href="{% url 'catalog:product_cat' object.pk %}">{{object}}</a>
+    </ul>
+    {% endfor %}
+    {% endblock %}
+</div>

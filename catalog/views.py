@@ -1,11 +1,13 @@
-from catalog.models import Product, Version
+from catalog.models import Product, Version, Category
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView, TemplateView, FormView
 from django.urls import reverse_lazy, reverse
 from django.forms import inlineformset_factory
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
+from django.contrib.auth.decorators import login_required
 
 from catalog.forms import ProductForm, VersionForm, ContactForm
+from catalog.services import get_categories
 
 
 class IndexView(TemplateView):
@@ -15,16 +17,28 @@ class IndexView(TemplateView):
     }
 
 
+# class CategoryListView(LoginRequiredMixin, ListView):
+#     model = Category
+#     extra_context = {
+#         'title': 'Все категории'
+#     }
+@login_required
+def show_category_list(request):
+    context = {'object_list': get_categories(),
+               'title': 'Все категории продуктов'}
+    return render(request, 'catalog/category_list.html', context)
+
+
 class ProductsListView(LoginRequiredMixin, ListView):
     model = Product
     template_name = 'catalog/products.html'
     context_object_name = 'products'
-    login_url = '/users'
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         active_version = Version.objects.filter(sign_ver='active')
         context['title'] = 'Все продукты'
+
         for product in context['object_list']:
             version = active_version.filter(product=product)
             if version:
@@ -36,12 +50,30 @@ class ProductsListView(LoginRequiredMixin, ListView):
         return context
 
 
+class ProductDetailsByCategory(ListView):
+    model = Product
+    template_name = 'catalog/products_cat.html'
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        queryset.filter(category_id=self.kwargs.get('pk'))
+        print(queryset[0].category)
+        return queryset
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(**kwargs)
+        category_item = Category.objects.get(pk=self.kwargs.get('pk'))
+        context['object_list'] = Product.objects.filter(category_id=category_item.pk)
+        context['title'] = f'Все продукты категории: {category_item.name}'
+
+        return context
+
+
 class ProductDetailView(LoginRequiredMixin, DetailView):
     model = Product
     template_name = 'catalog/product.html'
     context_object_name = 'product'
     pk_url_kwarg = 'pk'
-    login_url = '/users'
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -54,7 +86,6 @@ class ProductCreateView(LoginRequiredMixin, CreateView):
     model = Product
     form_class = ProductForm
     success_url = reverse_lazy('catalog:products')
-    login_url = '/users'
 
     def form_valid(self, form):
         self.object = form.save()
@@ -67,7 +98,6 @@ class ProductUpdateView(LoginRequiredMixin, UpdateView):
     model = Product
     form_class = ProductForm
     success_url = reverse_lazy('catalog:products')
-    login_url = '/users'
 
     def get_success_url(self):
         return reverse('catalog:update', args=[self.kwargs.get('pk')])
@@ -95,13 +125,11 @@ class ProductUpdateView(LoginRequiredMixin, UpdateView):
 class ProductDeleteView(LoginRequiredMixin, DeleteView):
     model = Product
     success_url = reverse_lazy('catalog:products')
-    login_url = '/users'
 
 
 class VersionListView(LoginRequiredMixin, ListView):
     model = Version
     context_object_name = 'version'
-    login_url = '/users'
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -121,5 +149,6 @@ class ContactFormView(FormView):
         return context
 
     def form_valid(self, form):
-        print(form.cleaned_data)
+        if form.is_valid():
+            print(form.cleaned_data)
         return redirect('/')
