@@ -3,9 +3,11 @@ from django.views.generic import ListView, DetailView, UpdateView, DeleteView, C
 from django.urls import reverse_lazy, reverse
 from django.forms import inlineformset_factory
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
+from django.contrib.auth.decorators import login_required
 
 from catalog.forms import ProductForm, VersionForm, ContactForm
+from catalog.services import get_categories
 
 
 class IndexView(TemplateView):
@@ -15,11 +17,16 @@ class IndexView(TemplateView):
     }
 
 
-class CategoryListView(LoginRequiredMixin, ListView):
-    model = Category
-    extra_context = {
-        'title': 'Все категории'
-    }
+# class CategoryListView(LoginRequiredMixin, ListView):
+#     model = Category
+#     extra_context = {
+#         'title': 'Все категории'
+#     }
+@login_required
+def show_category_list(request):
+    context = {'object_list': get_categories(),
+               'title': 'Все категории продуктов'}
+    return render(request, 'catalog/category_list.html', context)
 
 
 class ProductsListView(LoginRequiredMixin, ListView):
