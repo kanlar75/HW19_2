@@ -1,7 +1,7 @@
 from django.urls import path
 from django.contrib.auth.views import LoginView, LogoutView
 from users.apps import UsersConfig
-from users.views import RegisterView, ProfileView, generate_pass, password_reset_view, verify_email_view
+from users.views import RegisterView, ProfileView, generate_pass, password_reset_view, verify_email_view, LetterSending
 
 app_name = UsersConfig.name
 
@@ -13,6 +13,7 @@ urlpatterns = [
     path('profile/', ProfileView.as_view(), name='profile'),
     path('profile/new_pass', generate_pass, name='new_pass'),
     path('verification/<int:key>/', verify_email_view, name='verification'),
+    path('letter_sending/', LetterSending.as_view(), name='letter_sending'),
     path('forgot_password/', password_reset_view, name='password_reset'),
 
 ]

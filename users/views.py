@@ -2,19 +2,27 @@ import random
 
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy, reverse
-from django.views.generic import CreateView, UpdateView, FormView
+from django.views.generic import CreateView, UpdateView, FormView, TemplateView
 
 from catalog.forms import ContactForm
 from .models import User
 from .forms import UserRegisterForm, UserProfileForm
 from django.core.mail import send_mail
 from django.conf import settings
+from django.contrib.auth import login
+
+
+class LetterSending(TemplateView):
+    template_name = 'users/succsess_letter.html'
+    extra_context = {
+        'title': 'Завершение регистрации'
+    }
 
 
 class RegisterView(CreateView):
     model = User
     form_class = UserRegisterForm
-    success_url = reverse_lazy('users:login')
+    success_url = reverse_lazy('users:letter_sending')
     template_name = 'users/register.html'
 
     def form_valid(self, form):
@@ -64,7 +72,7 @@ def verify_email_view(request, key):
         context = {
             'object_list': User.objects.filter(verification_key=key)
         }
-
+    login(request, user)
     return render(request, 'users/verification.html', context)
 
 
@@ -83,6 +91,3 @@ def password_reset_view(request):
         return redirect('users:login')
 
     return render(request, 'users/reset_password.html')
-
-
-
